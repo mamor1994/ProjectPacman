@@ -26,7 +26,10 @@ namespace ProjectPacman
 
         string name;
 
-        public Form2(string name)
+        private string selectedDifficulty;
+
+
+        public Form2(string name, string selectedDifficulty)
         {
             InitializeComponent();
 
@@ -34,10 +37,14 @@ namespace ProjectPacman
 
             StartCountdownTimer();
 
-            coinSoundPlayer = new SoundPlayer();
-            coinSoundPlayer.SoundLocation = @"C:\Users\User\Documents\ProjectPacman\ProjectPacman\ProjectPacman\music\mysound.wav";
+            coinSoundPlayer = new SoundPlayer("pacManEating.wav");
+
+            //coinSoundPlayer = new SoundPlayer();
+            //coinSoundPlayer.SoundLocation = @"C:\Users\User\Documents\ProjectPacman\ProjectPacman\ProjectPacman\music\mysound.wav";
 
             this.name = name;
+            this.selectedDifficulty = selectedDifficulty;
+
         }
 
 
