@@ -64,7 +64,7 @@ namespace ProjectPacman
 
                 var headerLabel = new Label()
                 {
-                    Text = "Select Difficulty: ",
+                    Text = "Select Difficulty",
                     Location = new Point(50, 10),
                     Size = new Size(dialog.Width - 100, 20),
                     Font = new Font(dialog.Font, FontStyle.Bold),
