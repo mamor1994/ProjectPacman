@@ -35,7 +35,7 @@ namespace ProjectPacman
 
         private void playgame_Click(object sender, EventArgs e)
         {
-            player.Stop();
+           // player.Stop();
 
             if (userNameTextBox.Text.Length == 0)
             {
@@ -117,6 +117,21 @@ namespace ProjectPacman
 
                 return dialog.Tag as string;
             }
+        }
+
+
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void aboutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            string name = "Name: Maria Amorgianou";
+            string email = "Email: mariaamorgianou.1994@gmail.com";
+
+            string message = name + "\n" + email;
+            MessageBox.Show(message, "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
