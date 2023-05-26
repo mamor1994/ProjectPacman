@@ -1,6 +1,6 @@
 ﻿namespace ProjectPacman
 {
-    partial class Form2
+    partial class Game
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.txtScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.Countdown1 = new System.Windows.Forms.Label();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox57 = new System.Windows.Forms.PictureBox();
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
             this.pictureBox48 = new System.Windows.Forms.PictureBox();
@@ -84,10 +87,10 @@
             this.yellowGhost = new System.Windows.Forms.PictureBox();
             this.redGhost = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
@@ -139,10 +142,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.yellowGhost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.redGhost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
@@ -163,14 +164,45 @@
             // 
             // Countdown1
             // 
+            this.Countdown1.AccessibleName = "Countdown1";
             this.Countdown1.AutoSize = true;
             this.Countdown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.Countdown1.ForeColor = System.Drawing.Color.White;
             this.Countdown1.Location = new System.Drawing.Point(3, 30);
             this.Countdown1.Name = "Countdown1";
-            this.Countdown1.Size = new System.Drawing.Size(97, 25);
+            this.Countdown1.Size = new System.Drawing.Size(73, 25);
             this.Countdown1.TabIndex = 28;
-            this.Countdown1.Text = "Time: 60";
+            this.Countdown1.Tag = "Countdown1";
+            this.Countdown1.Text = "Time: ";
+            // 
+            // countdownTimer
+            // 
+            this.countdownTimer.Interval = 1000;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBox20.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.pictureBox20.Location = new System.Drawing.Point(287, 458);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(43, 235);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 29;
+            this.pictureBox20.TabStop = false;
+            this.pictureBox20.Tag = "wall";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBox3.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.pictureBox3.Location = new System.Drawing.Point(693, 505);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(43, 204);
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Tag = "wall";
             // 
             // pictureBox57
             // 
@@ -743,58 +775,36 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Tag = "wall";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox3.BackColor = System.Drawing.Color.Fuchsia;
-            this.pictureBox3.Location = new System.Drawing.Point(693, 505);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(55, 204);
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Tag = "wall";
-            // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Fuchsia;
-            this.pictureBox2.Location = new System.Drawing.Point(191, -21);
+            this.pictureBox2.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.pictureBox2.Location = new System.Drawing.Point(202, -21);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(55, 188);
+            this.pictureBox2.Size = new System.Drawing.Size(44, 210);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "wall";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Fuchsia;
-            this.pictureBox1.Location = new System.Drawing.Point(580, -21);
+            this.pictureBox1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Location = new System.Drawing.Point(585, -21);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 188);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 248);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "wall";
             // 
-            // pictureBox20
+            // Game
             // 
-            this.pictureBox20.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox20.BackColor = System.Drawing.Color.Fuchsia;
-            this.pictureBox20.Location = new System.Drawing.Point(287, 505);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(55, 188);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 29;
-            this.pictureBox20.TabStop = false;
-            this.pictureBox20.Tag = "wall";
-            // 
-            // Form2
-            // 
+            this.AccessibleName = "";
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(995, 675);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox3);
@@ -853,13 +863,17 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtScore);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form2";
+            this.Name = "Game";
+            this.RightToLeftLayout = true;
             this.Tag = "";
             this.Text = "PacMan Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
@@ -911,10 +925,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.yellowGhost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.redGhost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

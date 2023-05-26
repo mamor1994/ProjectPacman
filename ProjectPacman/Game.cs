@@ -13,7 +13,7 @@ using System.Media;
 
 namespace ProjectPacman
 {
-    public partial class Form2 : Form
+    public partial class Game : Form
     {
 
         bool goup, godown, goleft, goright, isGameOver;
@@ -24,26 +24,29 @@ namespace ProjectPacman
 
         private SoundPlayer coinSoundPlayer;
 
-        string name;
+        private string name;
 
         private string selectedDifficulty;
 
 
-        public Form2(string name, string selectedDifficulty)
+
+        public Game(string name, string selectedDifficulty)
         {
             InitializeComponent();
 
-            resetGame();
+            resetGame(selectedDifficulty);
+            StartCountdownTimer(selectedDifficulty);
 
-            StartCountdownTimer();
-
-            coinSoundPlayer = new SoundPlayer("pacManEating.wav");
+            //coinSoundPlayer = new SoundPlayer("pacManEating.wav");
 
             //coinSoundPlayer = new SoundPlayer();
             //coinSoundPlayer.SoundLocation = @"C:\Users\User\Documents\ProjectPacman\ProjectPacman\ProjectPacman\music\mysound.wav";
 
             this.name = name;
             this.selectedDifficulty = selectedDifficulty;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
 
         }
 
@@ -89,7 +92,8 @@ namespace ProjectPacman
             }
             if (e.KeyCode == Keys.Enter && isGameOver == true)
             {
-                resetGame();
+                resetGame(selectedDifficulty);
+
             }
         }
 
@@ -148,7 +152,7 @@ namespace ProjectPacman
                             x.Visible = false;
                             score++;
                             txtScore.Text = "Score: " + score;
-                            coinSoundPlayer.Play(); 
+                           // coinSoundPlayer.Play(); 
 
                         }
                     }
@@ -230,16 +234,29 @@ namespace ProjectPacman
         }
         
 
-        private void resetGame()
+        private void resetGame(string selectedDifficulty)
         {
             txtScore.Text = "Score: 0";
             score = 0;
 
-            redGhostSpeed = 5;
-            yellowGhostSpeed = 5;
-            pinkGhostX = 5;
-            pinkGhostY = 5;
-            playerSpeed = 8;
+            if (selectedDifficulty == "Easy")
+            {
+                remainingTime = 60;
+                redGhostSpeed = 5;
+                yellowGhostSpeed = 5;
+                pinkGhostX = 5;
+                pinkGhostY = 5;
+                playerSpeed = 8;
+            }
+            else
+            {
+                remainingTime = 30;
+                redGhostSpeed = 10;
+                yellowGhostSpeed = 10;
+                pinkGhostX = 10;
+                pinkGhostY = 10;
+                playerSpeed = 8;
+            }
 
             isGameOver = false;
 
@@ -281,15 +298,33 @@ namespace ProjectPacman
             DialogResult result = MessageBox.Show("Do you want to play again?", "Restart Game", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                resetGame();
+                resetGame(selectedDifficulty);
+            }
+            else
+            {
+                this.Hide();
+                Menu menu = new Menu();
+                menu.Show();
             }
         }
+        
 
-        private void StartCountdownTimer()
+        private void StartCountdownTimer(string selectedDifficulty)
         {
-            remainingTime = 60; 
+            if (selectedDifficulty == "Easy")
+            {
+                remainingTime = 60;
 
-            countdownTimer.Interval = 1000; 
+            }
+            else
+            {
+                remainingTime = 30;
+               
+            }
+
+            Countdown1.Text = "Time: " + remainingTime.ToString();
+
+            countdownTimer.Interval = 1000;
             countdownTimer.Tick += CountdownTimer_Tick;
             countdownTimer.Start();
         }

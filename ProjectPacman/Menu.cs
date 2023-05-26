@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
-
+using System.Drawing.Imaging;
 
 
 
@@ -16,15 +16,19 @@ namespace ProjectPacman
 {
     public partial class Menu : Form
     {
+
+        private readonly Form _parent;
+        private string name;
+
+
         //SoundPlayer player = new SoundPlayer("mysound.wav");
-        string selectedDifficulty;
+        //string selectedDifficulty;
 
 
         public Menu()
         {
             InitializeComponent();
             //player.SoundLocation = @"C:\Users\User\Documents\ProjectPacman\ProjectPacman\ProjectPacman\music\mysound.wav";
-
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -35,18 +39,19 @@ namespace ProjectPacman
 
         private void playgame_Click(object sender, EventArgs e)
         {
-           // player.Stop();
+            // player.Stop();
+            
+            name = userNameTextBox.Text.Trim();
 
-            if (userNameTextBox.Text.Length == 0)
+            if (string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("Please input your name.", "Message");
                 return;
             }
 
             string selectedDifficulty = ShowDifficultyDialog();
-            Form2 form2 = new Form2(userNameTextBox.Text, selectedDifficulty);
-            form2.Show();
-            this.Hide();
+            LaunchGame(selectedDifficulty);
+
         }
 
 
@@ -54,7 +59,6 @@ namespace ProjectPacman
         {
             using (var dialog = new Form())
             {
-                //dialog.Text = "Wait!";
                 dialog.FormBorderStyle = FormBorderStyle.FixedDialog;
                 dialog.StartPosition = FormStartPosition.CenterParent;
                 dialog.ControlBox = false;
@@ -103,20 +107,30 @@ namespace ProjectPacman
                     ForeColor = Color.White
                 };
 
-                dialog.Controls.Add(headerLabel);
+                dialog.Controls.AddRange(new Control[]
+                {
+                    headerLabel,
+                    easyRadioButton,
+                    hardRadioButton,
+                    confirmButton,
+                    cancelButton
+                });
 
-                dialog.Controls.Add(easyRadioButton);
-                dialog.Controls.Add(hardRadioButton);
-                dialog.Controls.Add(confirmButton);
-                dialog.Controls.Add(cancelButton);
+                cancelButton.Click += (sender, e) => dialog.Close();
 
-               
-                confirmButton.Click += (sender, e) => dialog.Close();
-
-                dialog.ShowDialog();
-
-                return dialog.Tag as string;
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    return easyRadioButton.Checked ? "Easy" : "Hard";
+                }
             }
+            return null;
+        }
+
+        private void LaunchGame(string selectedDifficulty)
+        {
+            this.Show();
+            Game game = new Game(name, selectedDifficulty);
+            game.ShowDialog();
         }
 
 
@@ -125,13 +139,21 @@ namespace ProjectPacman
             this.Close();
         }
 
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _parent.Show();
+        }
+
+
         private void aboutToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             string name = "Name: Maria Amorgianou";
             string email = "Email: mariaamorgianou.1994@gmail.com";
 
-            string message = name + "\n" + email;
+            string message = $"{name}\n{email}";
             MessageBox.Show(message, "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+       
     }
 }
