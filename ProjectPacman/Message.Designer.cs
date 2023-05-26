@@ -1,6 +1,6 @@
 ﻿namespace ProjectPacman
 {
-    partial class Form1
+    partial class Message
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Message));
+            this.radioButtonEasy = new System.Windows.Forms.RadioButton();
+            this.radioButtonHard = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnContinue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // radioButton1
+            // radioButtonEasy
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(191, 91);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(87, 31);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Easy";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonEasy.AutoSize = true;
+            this.radioButtonEasy.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonEasy.Location = new System.Drawing.Point(191, 91);
+            this.radioButtonEasy.Name = "radioButtonEasy";
+            this.radioButtonEasy.Size = new System.Drawing.Size(87, 31);
+            this.radioButtonEasy.TabIndex = 0;
+            this.radioButtonEasy.TabStop = true;
+            this.radioButtonEasy.Text = "Easy";
+            this.radioButtonEasy.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonHard
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(191, 140);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(89, 31);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Hard";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonHard.AutoSize = true;
+            this.radioButtonHard.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonHard.Location = new System.Drawing.Point(191, 140);
+            this.radioButtonHard.Name = "radioButtonHard";
+            this.radioButtonHard.Size = new System.Drawing.Size(89, 31);
+            this.radioButtonHard.TabIndex = 1;
+            this.radioButtonHard.TabStop = true;
+            this.radioButtonHard.Text = "Hard";
+            this.radioButtonHard.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -73,6 +73,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Red;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(256, 200);
             this.btnCancel.Name = "btnCancel";
@@ -85,6 +86,7 @@
             // btnContinue
             // 
             this.btnContinue.BackColor = System.Drawing.Color.Lime;
+            this.btnContinue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContinue.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContinue.Location = new System.Drawing.Point(77, 200);
             this.btnContinue.Name = "btnContinue";
@@ -94,7 +96,7 @@
             this.btnContinue.UseVisualStyleBackColor = false;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
-            // Form1
+            // Message
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,13 +105,14 @@
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonHard);
+            this.Controls.Add(this.radioButtonEasy);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Message";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Message";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,8 +121,8 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonEasy;
+        private System.Windows.Forms.RadioButton radioButtonHard;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnContinue;

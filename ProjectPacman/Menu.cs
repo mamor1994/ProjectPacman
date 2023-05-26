@@ -42,96 +42,108 @@ namespace ProjectPacman
             // player.Stop();
             
             name = userNameTextBox.Text.Trim();
+            
 
             if (string.IsNullOrEmpty(name))
             {
-                MessageBox.Show("Please input your name.", "Message");
+                //MessageBox.Show("Please input your name.", "Message");
+                string message = "Please input your name.";
+                MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            string selectedDifficulty = ShowDifficultyDialog();
-            LaunchGame(selectedDifficulty);
-
-        }
-
-
-        private string ShowDifficultyDialog()
-        {
-            using (var dialog = new Form())
+            else
             {
-                dialog.FormBorderStyle = FormBorderStyle.FixedDialog;
-                dialog.StartPosition = FormStartPosition.CenterParent;
-                dialog.ControlBox = false;
-                dialog.Size = new Size(200, 190);
-                dialog.BackColor = Color.Orange;
+                Message message = new Message(name);
+                message.ShowDialog();
 
-
-                var headerLabel = new Label()
-                {
-                    Text = "Select Difficulty",
-                    Location = new Point(50, 10),
-                    Size = new Size(dialog.Width - 100, 20),
-                    Font = new Font(dialog.Font, FontStyle.Bold),
-                    TextAlign = ContentAlignment.MiddleCenter
-                };
-
-
-                var easyRadioButton = new RadioButton()
-                {
-                    Text = "Easy",
-                    Location = new Point(50, 30),
-                    Checked = true
-                };
-
-                var hardRadioButton = new RadioButton()
-                {
-                    Text = "Hard",
-                    Location = new Point(50, 60)
-                };
-
-                var confirmButton = new Button()
-                {
-                    Text = "Confirm",
-                    Location = new Point(65, 90),
-                    DialogResult = DialogResult.OK,
-                    BackColor = Color.Green,
-                    ForeColor = Color.White
-                };
-
-                var cancelButton = new Button()
-                {
-                    Text = "Cancel",
-                    Location = new Point(65, confirmButton.Bottom + 10),
-                    DialogResult = DialogResult.Cancel,
-                    BackColor = Color.Red,
-                    ForeColor = Color.White
-                };
-
-                dialog.Controls.AddRange(new Control[]
-                {
-                    headerLabel,
-                    easyRadioButton,
-                    hardRadioButton,
-                    confirmButton,
-                    cancelButton
-                });
-
-                cancelButton.Click += (sender, e) => dialog.Close();
-
-                if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    return easyRadioButton.Checked ? "Easy" : "Hard";
-                }
             }
-            return null;
+
+            //string selectedDifficulty = ShowDifficultyDialog();
+            //LaunchGame(selectedDifficulty);
+            //this.Close();
+            //Form1 form = new Form1();
+            //form.Show();
+
         }
 
-        private void LaunchGame(string selectedDifficulty)
-        {
-            this.Show();
-            Game game = new Game(name, selectedDifficulty);
-            game.ShowDialog();
-        }
+
+        //private string ShowDifficultyDialog()
+        //{
+        //    using (var dialog = new Form())
+        //    {
+        //        dialog.FormBorderStyle = FormBorderStyle.FixedDialog;
+        //        dialog.StartPosition = FormStartPosition.CenterParent;
+        //        dialog.ControlBox = false;
+        //        dialog.Size = new Size(200, 190);
+        //        dialog.BackColor = Color.Orange;
+
+
+        //        var headerLabel = new Label()
+        //        {
+        //            Text = "Select Difficulty",
+        //            Location = new Point(50, 10),
+        //            Size = new Size(dialog.Width - 100, 20),
+        //            Font = new Font(dialog.Font, FontStyle.Bold),
+        //            TextAlign = ContentAlignment.MiddleCenter
+        //        };
+
+
+        //        var easyRadioButton = new RadioButton()
+        //        {
+        //            Text = "Easy",
+        //            Location = new Point(50, 30),
+        //            Checked = true
+        //        };
+
+        //        var hardRadioButton = new RadioButton()
+        //        {
+        //            Text = "Hard",
+        //            Location = new Point(50, 60)
+        //        };
+
+        //        var confirmButton = new Button()
+        //        {
+        //            Text = "Confirm",
+        //            Location = new Point(65, 90),
+        //            DialogResult = DialogResult.OK,
+        //            BackColor = Color.Green,
+        //            ForeColor = Color.White
+        //        };
+
+        //        var cancelButton = new Button()
+        //        {
+        //            Text = "Cancel",
+        //            Location = new Point(65, confirmButton.Bottom + 10),
+        //            DialogResult = DialogResult.Cancel,
+        //            BackColor = Color.Red,
+        //            ForeColor = Color.White
+        //        };
+
+        //        dialog.Controls.AddRange(new Control[]
+        //        {
+        //            headerLabel,
+        //            easyRadioButton,
+        //            hardRadioButton,
+        //            confirmButton,
+        //            cancelButton
+        //        });
+
+        //        cancelButton.Click += (sender, e) => dialog.Close();
+
+        //        if (dialog.ShowDialog() == DialogResult.OK)
+        //        {
+        //            return easyRadioButton.Checked ? "Easy" : "Hard";
+        //        }
+        //    }
+        //    return null;
+        //}
+
+        //private void LaunchGame(string selectedDifficulty)
+        //{
+        //    this.Show();
+        //    Game game = new Game(name, selectedDifficulty);
+        //    game.ShowDialog();
+        //}
 
 
         private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -149,8 +161,9 @@ namespace ProjectPacman
         {
             string name = "Name: Maria Amorgianou";
             string email = "Email: mariaamorgianou.1994@gmail.com";
+            string am = "AM: MPPL2205";
 
-            string message = $"{name}\n{email}";
+            string message = $"{name}\n{email}\n{am}";
             MessageBox.Show(message, "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

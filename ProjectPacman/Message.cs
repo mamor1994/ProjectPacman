@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ProjectPacman
 {
-    public partial class Form1 : Form
+    public partial class Message : Form
     {
         private string name;
         private string selectedDifficulty;
 
-        public Form1()
+        public Message(string name)
         {
             InitializeComponent();
         }
@@ -29,9 +30,22 @@ namespace ProjectPacman
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Game game = new Game(name, selectedDifficulty);
-            game.Show();
+            
+            if (radioButtonEasy.Checked)
+            {
+                
+                this.Close();
+                Game easyGame = new Game(name, selectedDifficulty);
+                easyGame.ShowDialog();
+            }
+            else if (radioButtonHard.Checked)
+            {
+                //HardGameForm hardGame = new HardGameForm(name);
+                //hardGame.ShowDialog();
+            }
+            //this.Close();
+            //Game game = new Game(name, selectedDifficulty);
+            //game.Show();
         }
     }
 }
