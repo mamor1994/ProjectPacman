@@ -14,7 +14,7 @@ using System.Drawing.Imaging;
 
 namespace ProjectPacman
 {
-    public partial class Menu : Form
+    public partial class MenuForm : Form
     {
 
         private readonly Form _parent;
@@ -22,10 +22,9 @@ namespace ProjectPacman
 
 
         //SoundPlayer player = new SoundPlayer("mysound.wav");
-        //string selectedDifficulty;
 
 
-        public Menu()
+        public MenuForm()
         {
             InitializeComponent();
             //player.SoundLocation = @"C:\Users\User\Documents\ProjectPacman\ProjectPacman\ProjectPacman\music\mysound.wav";
@@ -53,7 +52,7 @@ namespace ProjectPacman
             }
             else
             {
-                Message message = new Message(name);
+                MessageForm message = new MessageForm(name);
                 message.ShowDialog();
 
             }

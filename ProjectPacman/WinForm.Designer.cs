@@ -1,6 +1,6 @@
 ﻿namespace ProjectPacman
 {
-    partial class Save
+    partial class WinForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,9 @@
             // 
             this.btnSave.AccessibleName = "btnSave";
             this.btnSave.BackColor = System.Drawing.Color.Lime;
-            this.btnSave.Location = new System.Drawing.Point(95, 298);
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnSave.Location = new System.Drawing.Point(87, 283);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 75);
@@ -52,56 +54,63 @@
             // 
             this.btnCancel.AccessibleName = "btnCancel";
             this.btnCancel.BackColor = System.Drawing.Color.Red;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(288, 298);
+            this.btnCancel.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnCancel.Location = new System.Drawing.Point(282, 283);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(130, 75);
+            this.btnCancel.Size = new System.Drawing.Size(150, 75);
             this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "Return to main menu";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // button1
             // 
-            this.button1.AccessibleName = "button1";
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(484, 298);
+            this.button1.AccessibleName = "btnPlayAgain";
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button1.Location = new System.Drawing.Point(501, 283);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 75);
             this.button1.TabIndex = 3;
             this.button1.Text = "Play again";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackgroundImage = global::ProjectPacman.Properties.Resources.save;
+            this.pictureBox1.BackgroundImage = global::ProjectPacman.Properties.Resources.win;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(-35, -5);
+            this.pictureBox1.Location = new System.Drawing.Point(1, -27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(749, 280);
+            this.pictureBox1.Size = new System.Drawing.Size(701, 290);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // Save
+            // WinForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(711, 386);
+            this.ClientSize = new System.Drawing.Size(702, 416);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.Desktop;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Save";
-            this.Text = "save";
+            this.Name = "WinForm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

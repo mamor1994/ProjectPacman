@@ -1,6 +1,6 @@
 ﻿namespace ProjectPacman
 {
-    partial class Game
+    partial class EasyGameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EasyGameForm));
             this.txtScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.Countdown1 = new System.Windows.Forms.Label();
@@ -868,6 +868,7 @@
             this.MinimizeBox = false;
             this.Name = "Game";
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";
             this.Text = "PacMan Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);

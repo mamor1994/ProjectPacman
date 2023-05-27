@@ -1,6 +1,6 @@
 ﻿namespace ProjectPacman
 {
-    partial class Message
+    partial class MessageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Message));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageForm));
             this.radioButtonEasy = new System.Windows.Forms.RadioButton();
             this.radioButtonHard = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();

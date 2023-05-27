@@ -46,40 +46,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Message.cs">
+    <Compile Include="GameOverForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Message.Designer.cs">
-      <DependentUpon>Message.cs</DependentUpon>
+    <Compile Include="GameOverForm.Designer.cs">
+      <DependentUpon>GameOverForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Save.cs">
+    <Compile Include="MessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Save.Designer.cs">
-      <DependentUpon>Save.cs</DependentUpon>
+    <Compile Include="MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Game.cs">
+    <Compile Include="WinForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Game.Designer.cs">
-      <DependentUpon>Game.cs</DependentUpon>
+    <Compile Include="WinForm.Designer.cs">
+      <DependentUpon>WinForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="EasyGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="EasyGameForm.Designer.cs">
+      <DependentUpon>EasyGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Message.resx">
-      <DependentUpon>Message.cs</DependentUpon>
+    <EmbeddedResource Include="GameOverForm.resx">
+      <DependentUpon>GameOverForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Game.resx">
-      <DependentUpon>Game.cs</DependentUpon>
+    <EmbeddedResource Include="MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="EasyGameForm.resx">
+      <DependentUpon>EasyGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,8 +100,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Save.resx">
-      <DependentUpon>Save.cs</DependentUpon>
+    <EmbeddedResource Include="WinForm.resx">
+      <DependentUpon>WinForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -108,6 +117,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\gameover.jpg" />
+    <None Include="Resources\win.jpg" />
+    <None Include="Resources\save.gif" />
+    <None Include="Resources\360_F_488660770_9rRxUcYIXuh7qR0B6iPXdYbrv8jny3lS.jpg" />
     <None Include="images\save.gif" />
     <None Include="images\αρχείο λήψης.png" />
     <None Include="images\cancel.png" />

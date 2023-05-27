@@ -13,7 +13,7 @@ using System.Media;
 
 namespace ProjectPacman
 {
-    public partial class Game : Form
+    public partial class EasyGameForm : Form
     {
 
         bool goup, godown, goleft, goright, isGameOver;
@@ -22,7 +22,7 @@ namespace ProjectPacman
 
         int remainingTime; 
 
-        private SoundPlayer coinSoundPlayer;
+        //private SoundPlayer coinSoundPlayer;
 
         private string name;
 
@@ -30,7 +30,7 @@ namespace ProjectPacman
 
 
 
-        public Game(string name, string selectedDifficulty)
+        public EasyGameForm(string name, string selectedDifficulty)
         {
             InitializeComponent();
 
@@ -286,27 +286,27 @@ namespace ProjectPacman
 
        
 
-        private void gameOver(string message)
-        {
-            isGameOver = true;
-            gameTimer.Stop();
-            countdownTimer.Stop();
+        //private void gameOver(string message)
+        //{
+        //    isGameOver = true;
+        //    gameTimer.Stop();
+        //    countdownTimer.Stop();
 
-            txtScore.Text = "Score: " + score + Environment.NewLine + message;
-            MessageBox.Show("You lose!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    txtScore.Text = "Score: " + score + Environment.NewLine + message;
+        //    MessageBox.Show("You lose!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            DialogResult result = MessageBox.Show("Do you want to play again?", "Restart Game", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                resetGame(selectedDifficulty);
-            }
-            else
-            {
-                this.Hide();
-                Menu menu = new Menu();
-                menu.Show();
-            }
-        }
+        //    DialogResult result = MessageBox.Show("Do you want to play again?", "Restart Game", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //    if (result == DialogResult.Yes)
+        //    {
+        //        resetGame(selectedDifficulty);
+        //    }
+        //    else
+        //    {
+        //        this.Hide();
+        //        MenuForm menu = new MenuForm();
+        //        menu.Show();
+        //    }
+        //}
         
 
         private void StartCountdownTimer(string selectedDifficulty)
@@ -314,19 +314,21 @@ namespace ProjectPacman
             if (selectedDifficulty == "Easy")
             {
                 remainingTime = 60;
-
+                Countdown1.Text = "Time: " + remainingTime.ToString();
+                countdownTimer.Interval = 1000;
+                countdownTimer.Tick += CountdownTimer_Tick;
+                countdownTimer.Start();
             }
             else
             {
                 remainingTime = 30;
-               
+                Countdown1.Text = "Time: " + remainingTime.ToString();
+                countdownTimer.Interval = 1000;
+                countdownTimer.Tick += CountdownTimer_Tick;
+                countdownTimer.Start();
             }
 
-            Countdown1.Text = "Time: " + remainingTime.ToString();
-
-            countdownTimer.Interval = 1000;
-            countdownTimer.Tick += CountdownTimer_Tick;
-            countdownTimer.Start();
+           
         }
 
         private void CountdownTimer_Tick(object sender, EventArgs e)
@@ -341,7 +343,8 @@ namespace ProjectPacman
             else
             {
                 TerminateGame();
-                gameOver("Time's up! You Lose!");
+                GameOverForm gameover = new GameOverForm();
+                gameover.Show();
             }
         }
 

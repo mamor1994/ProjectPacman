@@ -7,45 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace ProjectPacman
 {
-    public partial class Message : Form
+    public partial class GameOverForm : Form
     {
+
         private string name;
         private string selectedDifficulty;
 
-        public Message(string name)
+        //SoundPlayer player = new SoundPlayer("mysound.wav");
+
+        public GameOverForm()
         {
             InitializeComponent();
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Menu menu = new Menu();
-            menu.Show();
+                // player.Stop();
+
+                this.Hide();
+                MenuForm menu = new MenuForm();
+                menu.Show();
+
         }
 
-        private void btnContinue_Click(object sender, EventArgs e)
+        private void btnPlayAgain_Click(object sender, EventArgs e)
         {
-            
-            if (radioButtonEasy.Checked)
+            // player.Stop();
+            if (selectedDifficulty == "Easy")
             {
-                
                 this.Close();
-                Game easyGame = new Game(name, selectedDifficulty);
+                EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
                 easyGame.ShowDialog();
+
+
             }
-            else if (radioButtonHard.Checked)
+            else if (selectedDifficulty == "Hard")
             {
+                //this.Close();
                 //HardGameForm hardGame = new HardGameForm(name);
                 //hardGame.ShowDialog();
             }
-            //this.Close();
-            //Game game = new Game(name, selectedDifficulty);
-            //game.Show();
         }
     }
 }
