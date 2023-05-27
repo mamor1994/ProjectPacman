@@ -185,7 +185,9 @@ namespace ProjectPacman
                         if (pacman.Bounds.IntersectsWith(x.Bounds))
                         {
                             TerminateGame();
-                            gameOver("You Lose!");
+                            GameOverForm gameover = new GameOverForm();
+                            gameover.Show();
+                            //gameOver("You Lose!");
                         }
                     }
                 }
@@ -228,11 +230,13 @@ namespace ProjectPacman
             if (score >= 46)
             {
                 TerminateGame();
+                WinForm win = new WinForm();
+                win.Show();
                 //gameOver("You Win!");
             }
             
         }
-        
+     
 
         private void resetGame(string selectedDifficulty)
         {
@@ -355,6 +359,7 @@ namespace ProjectPacman
             countdownTimer.Stop();
 
         }
+
+
     }
-    
 }

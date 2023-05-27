@@ -39,12 +39,13 @@ namespace ProjectPacman
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            
+
             if (radioButtonEasy.Checked)
             {
                 // player.Stop();
                 selectedDifficulty = "Easy";
-                this.Close();
+                CloseMenuAndMessageForms();
+                //this.Hide();
                 EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
                 easyGame.ShowDialog();
             }
@@ -52,13 +53,39 @@ namespace ProjectPacman
             {
                 // player.Stop();
                 selectedDifficulty = "Hard";
-                this.Close();
+                CloseMenuAndMessageForms();
                 EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
                 easyGame.ShowDialog();
                 //HardGameForm hardGame = new HardGameForm(name, selectedDifficulty);
                 //hardGame.ShowDialog();
             }
-
         }
+
+        //private void CloseMenuAndMessageForms()
+        //{
+        //    foreach (Form form in Application.OpenForms)
+        //    {
+        //        if (form is MenuForm)
+        //        {
+        //            form.Close();
+        //            break;
+        //        }
+        //    }
+
+        //    EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
+        //    easyGame.ShowDialog();
+        //    this.Close();
+        //}
+
+        private void CloseMenuAndMessageForms()
+        {
+            // Close the "GameOver" form if it is open
+            MenuForm menu = Application.OpenForms.OfType<MenuForm>().FirstOrDefault();
+            menu?.Hide();
+
+            // Close the "Game" form
+            this.Hide();
+        }
+
     }
 }

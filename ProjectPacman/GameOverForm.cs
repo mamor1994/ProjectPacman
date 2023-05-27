@@ -26,11 +26,13 @@ namespace ProjectPacman
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-                // player.Stop();
+            // player.Stop();
 
-                this.Hide();
-                MenuForm menu = new MenuForm();
-                menu.Show();
+            // this.Hide();
+            CloseGameAndGameOverForms();
+
+            MenuForm menu = new MenuForm();
+            menu.Show();
 
         }
 
@@ -45,12 +47,26 @@ namespace ProjectPacman
 
 
             }
-            else if (selectedDifficulty == "Hard")
+            else //if (selectedDifficulty == "Hard")
             {
                 //this.Close();
                 //HardGameForm hardGame = new HardGameForm(name);
                 //hardGame.ShowDialog();
             }
         }
+        private void CloseGameAndGameOverForms()
+        {
+            // Find and close the "GameOver" form
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is EasyGameForm)
+                {
+                    form.Hide();
+                    break;
+                }
+            }
+            this.Hide();
+        }
+
     }
 }
