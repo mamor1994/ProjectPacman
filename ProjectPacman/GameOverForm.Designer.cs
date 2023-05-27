@@ -37,7 +37,8 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.Red;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.btnCancel.Location = new System.Drawing.Point(133, 334);
             this.btnCancel.Name = "btnCancel";
@@ -45,7 +46,6 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Return to main menu";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.UseWaitCursor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // pictureBox1
@@ -60,15 +60,15 @@
             // btnPlayAgain
             // 
             this.btnPlayAgain.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnPlayAgain.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnPlayAgain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayAgain.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btnPlayAgain.Location = new System.Drawing.Point(370, 334);
+            this.btnPlayAgain.Location = new System.Drawing.Point(371, 334);
             this.btnPlayAgain.Name = "btnPlayAgain";
             this.btnPlayAgain.Size = new System.Drawing.Size(141, 83);
             this.btnPlayAgain.TabIndex = 2;
             this.btnPlayAgain.Text = "Play again";
             this.btnPlayAgain.UseVisualStyleBackColor = false;
-            this.btnPlayAgain.UseWaitCursor = true;
             this.btnPlayAgain.Click += new System.EventHandler(this.btnPlayAgain_Click);
             // 
             // GameOverForm

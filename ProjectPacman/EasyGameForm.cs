@@ -25,9 +25,8 @@ namespace ProjectPacman
         //private SoundPlayer coinSoundPlayer;
 
         private string name;
-
         private string selectedDifficulty;
-
+        
 
 
         public EasyGameForm(string name, string selectedDifficulty)
@@ -230,7 +229,7 @@ namespace ProjectPacman
             if (score >= 46)
             {
                 TerminateGame();
-                WinForm win = new WinForm();
+                WinForm win = new WinForm(name, selectedDifficulty, score);
                 win.Show();
                 //gameOver("You Win!");
             }

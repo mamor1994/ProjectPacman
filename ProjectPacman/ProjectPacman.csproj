@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HardGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HardGameForm.Designer.cs">
+      <DependentUpon>HardGameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameOverForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GameOverForm.resx">
       <DependentUpon>GameOverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HardGameForm.resx">
+      <DependentUpon>HardGameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageForm.resx">
       <DependentUpon>MessageForm.cs</DependentUpon>

@@ -26,6 +26,7 @@ namespace ProjectPacman
         public MessageForm(string name)
         {
             InitializeComponent();
+            this.name = name;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -79,11 +80,10 @@ namespace ProjectPacman
 
         private void CloseMenuAndMessageForms()
         {
-            // Close the "GameOver" form if it is open
             MenuForm menu = Application.OpenForms.OfType<MenuForm>().FirstOrDefault();
             menu?.Hide();
 
-            // Close the "Game" form
+            
             this.Hide();
         }
 

@@ -21,13 +21,17 @@ namespace ProjectPacman
 
         private string name;
         private string selectedDifficulty;
+        private int score;
 
         //SoundPlayer player = new SoundPlayer("mysound.wav");
 
 
-        public WinForm()
+        public WinForm(string name, string selectedDifficulty, int score)
         {
             InitializeComponent();
+            this.name = name;
+            this.selectedDifficulty = selectedDifficulty;
+            this.score = score;
 
             //Image gifImage = Image.FromFile(@"images\animated.gif");
             //pictureBox1.Image = gifImage;
@@ -73,9 +77,9 @@ namespace ProjectPacman
         {
             // player.Stop();
 
-            this.Hide();
+            CloseGameAndWinForms();
             MenuForm menu = new MenuForm();
-            menu.Show();
+            menu.ShowDialog();
               
         }
 
@@ -86,13 +90,16 @@ namespace ProjectPacman
             {
                 this.Close();
                 EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
-                easyGame.ShowDialog();
+                easyGame.Show();
 
               
             }
             else if (selectedDifficulty == "Hard")
             {
                 //this.Close();
+                EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
+                easyGame.Show();
+
                 //HardGameForm hardGame = new HardGameForm(name);
                 //hardGame.ShowDialog();
             }
@@ -109,10 +116,28 @@ namespace ProjectPacman
             {
                 using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
                 {
-                    sw.Write(this.Text);
+                    //sw.Write(this.Text);
+
+                    sw.WriteLine("Name: " + name);
+                    sw.WriteLine("Difficulty: " + selectedDifficulty);
+                    sw.WriteLine("Score: " + score);
+                }
+                MessageBox.Show("Game data saved successfully!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+        }
+        private void CloseGameAndWinForms()
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is EasyGameForm)
+                {
+                    form.Hide();
+                    break;
                 }
             }
-            
+            this.Hide();
         }
     }
 }

@@ -80,7 +80,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1000, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1000, 30);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,7 +91,7 @@
             this.exitToolStripMenuItem});
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(64, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(64, 26);
             this.toolStripMenuItem1.Text = "&Home";
             // 
             // exitToolStripMenuItem
@@ -108,7 +108,7 @@
             // 
             this.aboutToolStripMenuItem.BackColor = System.Drawing.SystemColors.MenuBar;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
             this.aboutToolStripMenuItem.Tag = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click_1);
@@ -119,9 +119,9 @@
             this.panel1.BackgroundImage = global::ProjectPacman.Properties.Resources.pac_man;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 489);
+            this.panel1.Size = new System.Drawing.Size(584, 487);
             this.panel1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.panel1.TabIndex = 0;
             this.panel1.TabStop = false;
