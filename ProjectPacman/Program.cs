@@ -16,7 +16,8 @@ namespace ProjectPacman
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuForm());
+            HardGameForm mainForm = new HardGameForm();
+            Application.Run(mainForm);
         }
     }
 }

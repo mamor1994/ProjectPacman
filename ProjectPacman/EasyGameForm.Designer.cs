@@ -798,7 +798,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "wall";
             // 
-            // Game
+            // EasyGameForm
             // 
             this.AccessibleName = "";
             this.AllowDrop = true;
@@ -866,7 +866,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Game";
+            this.Name = "EasyGameForm";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";

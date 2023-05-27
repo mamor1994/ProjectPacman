@@ -39,10 +39,18 @@ namespace ProjectPacman
             // player.Stop();
             if (selectedDifficulty == "Easy")
             {
-                this.Hide();
-                CloseGameAndGameOverForms();
-                EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
-                easyGame.ShowDialog();
+                //EasyGameForm gameForm = Application.OpenForms.OfType<EasyGameForm>().FirstOrDefault();
+                //GameOverForm gameOverForm = Application.OpenForms.OfType<GameOverForm>().FirstOrDefault();
+
+                //gameForm?.Close();
+                //gameOverForm?.Close();
+
+          
+
+                //this.Hide();
+                //CloseGameAndGameOverForms();
+                EasyGameForm neweasyGame = new EasyGameForm(name, selectedDifficulty);
+                neweasyGame.Show();
 
 
             }
