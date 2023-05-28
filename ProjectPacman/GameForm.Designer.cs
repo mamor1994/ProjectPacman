@@ -89,6 +89,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).BeginInit();
@@ -144,6 +146,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.SuspendLayout();
             // 
             // txtScore
@@ -230,7 +234,7 @@
             // pictureBox48
             // 
             this.pictureBox48.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox48.Location = new System.Drawing.Point(679, 106);
+            this.pictureBox48.Location = new System.Drawing.Point(791, 628);
             this.pictureBox48.Name = "pictureBox48";
             this.pictureBox48.Size = new System.Drawing.Size(25, 25);
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -241,7 +245,7 @@
             // pictureBox56
             // 
             this.pictureBox56.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox56.Location = new System.Drawing.Point(679, 41);
+            this.pictureBox56.Location = new System.Drawing.Point(791, 568);
             this.pictureBox56.Name = "pictureBox56";
             this.pictureBox56.Size = new System.Drawing.Size(25, 25);
             this.pictureBox56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,7 +267,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox10.Location = new System.Drawing.Point(24, 442);
+            this.pictureBox10.Location = new System.Drawing.Point(783, 373);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(25, 25);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +311,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox9.Location = new System.Drawing.Point(24, 385);
+            this.pictureBox9.Location = new System.Drawing.Point(24, 449);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(25, 25);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -318,7 +322,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox8.Location = new System.Drawing.Point(82, 442);
+            this.pictureBox8.Location = new System.Drawing.Point(841, 373);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(25, 25);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -329,7 +333,7 @@
             // pictureBox46
             // 
             this.pictureBox46.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox46.Location = new System.Drawing.Point(735, 106);
+            this.pictureBox46.Location = new System.Drawing.Point(540, 142);
             this.pictureBox46.Name = "pictureBox46";
             this.pictureBox46.Size = new System.Drawing.Size(25, 25);
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -351,7 +355,7 @@
             // pictureBox38
             // 
             this.pictureBox38.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox38.Location = new System.Drawing.Point(711, 432);
+            this.pictureBox38.Location = new System.Drawing.Point(918, 535);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(25, 25);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -362,7 +366,7 @@
             // pictureBox34
             // 
             this.pictureBox34.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox34.Location = new System.Drawing.Point(918, 313);
+            this.pictureBox34.Location = new System.Drawing.Point(794, 106);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(25, 25);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -373,7 +377,7 @@
             // pictureBox53
             // 
             this.pictureBox53.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox53.Location = new System.Drawing.Point(655, 432);
+            this.pictureBox53.Location = new System.Drawing.Point(918, 600);
             this.pictureBox53.Name = "pictureBox53";
             this.pictureBox53.Size = new System.Drawing.Size(25, 25);
             this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -385,7 +389,7 @@
             // pictureBox50
             // 
             this.pictureBox50.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox50.Location = new System.Drawing.Point(859, 248);
+            this.pictureBox50.Location = new System.Drawing.Point(735, 41);
             this.pictureBox50.Name = "pictureBox50";
             this.pictureBox50.Size = new System.Drawing.Size(25, 25);
             this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -419,7 +423,7 @@
             // pictureBox45
             // 
             this.pictureBox45.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox45.Location = new System.Drawing.Point(791, 106);
+            this.pictureBox45.Location = new System.Drawing.Point(540, 90);
             this.pictureBox45.Name = "pictureBox45";
             this.pictureBox45.Size = new System.Drawing.Size(25, 25);
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -441,7 +445,7 @@
             // pictureBox33
             // 
             this.pictureBox33.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox33.Location = new System.Drawing.Point(859, 385);
+            this.pictureBox33.Location = new System.Drawing.Point(735, 166);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(25, 25);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -463,7 +467,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox7.Location = new System.Drawing.Point(140, 442);
+            this.pictureBox7.Location = new System.Drawing.Point(899, 373);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(25, 25);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -474,7 +478,7 @@
             // pictureBox44
             // 
             this.pictureBox44.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox44.Location = new System.Drawing.Point(735, 41);
+            this.pictureBox44.Location = new System.Drawing.Point(791, 505);
             this.pictureBox44.Name = "pictureBox44";
             this.pictureBox44.Size = new System.Drawing.Size(25, 25);
             this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -496,7 +500,7 @@
             // pictureBox43
             // 
             this.pictureBox43.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox43.Location = new System.Drawing.Point(791, 41);
+            this.pictureBox43.Location = new System.Drawing.Point(540, 41);
             this.pictureBox43.Name = "pictureBox43";
             this.pictureBox43.Size = new System.Drawing.Size(25, 25);
             this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -507,7 +511,7 @@
             // pictureBox22
             // 
             this.pictureBox22.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox22.Location = new System.Drawing.Point(859, 313);
+            this.pictureBox22.Location = new System.Drawing.Point(735, 106);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(25, 25);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -530,7 +534,7 @@
             // pictureBox35
             // 
             this.pictureBox35.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox35.Location = new System.Drawing.Point(918, 385);
+            this.pictureBox35.Location = new System.Drawing.Point(794, 166);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(25, 25);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -552,7 +556,7 @@
             // pictureBox31
             // 
             this.pictureBox31.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox31.Location = new System.Drawing.Point(918, 248);
+            this.pictureBox31.Location = new System.Drawing.Point(794, 41);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(25, 25);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -653,7 +657,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox6.Location = new System.Drawing.Point(140, 385);
+            this.pictureBox6.Location = new System.Drawing.Point(140, 449);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(25, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -664,7 +668,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox5.Location = new System.Drawing.Point(202, 385);
+            this.pictureBox5.Location = new System.Drawing.Point(202, 449);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(25, 25);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -697,7 +701,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.pictureBox13.Location = new System.Drawing.Point(202, 442);
+            this.pictureBox13.Location = new System.Drawing.Point(961, 373);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(25, 25);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -708,7 +712,7 @@
             // coin
             // 
             this.coin.Image = global::ProjectPacman.Properties.Resources.coin;
-            this.coin.Location = new System.Drawing.Point(82, 385);
+            this.coin.Location = new System.Drawing.Point(82, 449);
             this.coin.Name = "coin";
             this.coin.Size = new System.Drawing.Size(25, 25);
             this.coin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -798,6 +802,30 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "wall";
             // 
+            // pictureBox23
+            // 
+            this.pictureBox23.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.pictureBox23.Location = new System.Drawing.Point(825, 234);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(172, 39);
+            this.pictureBox23.TabIndex = 30;
+            this.pictureBox23.TabStop = false;
+            this.pictureBox23.Tag = "wall";
+            this.pictureBox23.UseWaitCursor = true;
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.pictureBox32.Location = new System.Drawing.Point(-7, 373);
+            this.pictureBox32.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(172, 39);
+            this.pictureBox32.TabIndex = 31;
+            this.pictureBox32.TabStop = false;
+            this.pictureBox32.Tag = "wall";
+            this.pictureBox32.UseWaitCursor = true;
+            // 
             // GameForm
             // 
             this.AccessibleName = "";
@@ -806,6 +834,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(995, 675);
+            this.Controls.Add(this.pictureBox32);
+            this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.Countdown1);
@@ -928,6 +958,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -994,5 +1026,7 @@
         private System.Windows.Forms.Label Countdown1;
         private System.Windows.Forms.Timer countdownTimer;
         private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.PictureBox pictureBox32;
     }
 }

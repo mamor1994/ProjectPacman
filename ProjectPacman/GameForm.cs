@@ -17,9 +17,7 @@ namespace ProjectPacman
     {
 
         bool goup, godown, goleft, goright, isGameOver;
-
         int score, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostSpeed;
-
         int remainingTime; 
 
         private SoundPlayer coinSoundPlayer;
@@ -40,11 +38,8 @@ namespace ProjectPacman
 
             this.name = name;
             this.selectedDifficulty = selectedDifficulty;
-
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-
-
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
@@ -134,7 +129,6 @@ namespace ProjectPacman
                 pacman.Top = 0;
             }
 
-
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox)
@@ -147,7 +141,6 @@ namespace ProjectPacman
                             score++;
                             txtScore.Text = "Score: " + score;
                            coinSoundPlayer.Play(); 
-
                         }
                     }
 
@@ -171,7 +164,6 @@ namespace ProjectPacman
                         {
                             pinkGhostSpeed = -pinkGhostSpeed;
                         }
-
                     }
 
                     if ((string)x.Tag == "ghost")
@@ -284,7 +276,6 @@ namespace ProjectPacman
         private void CountdownTimer_Tick(object sender, EventArgs e)
         {
             remainingTime--;
-
             if (remainingTime >= 0)
             {
                 

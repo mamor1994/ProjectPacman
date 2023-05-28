@@ -41,7 +41,7 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btnCancel.Location = new System.Drawing.Point(169, 348);
+            this.btnCancel.Location = new System.Drawing.Point(162, 325);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(141, 83);
             this.btnCancel.TabIndex = 1;
@@ -52,6 +52,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::ProjectPacman.Properties.Resources.gameover;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(-9, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(628, 286);
@@ -64,7 +65,7 @@
             this.btnPlayAgain.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayAgain.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.btnPlayAgain.Location = new System.Drawing.Point(333, 348);
+            this.btnPlayAgain.Location = new System.Drawing.Point(332, 325);
             this.btnPlayAgain.Name = "btnPlayAgain";
             this.btnPlayAgain.Size = new System.Drawing.Size(141, 83);
             this.btnPlayAgain.TabIndex = 2;
@@ -77,7 +78,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(623, 468);
+            this.ClientSize = new System.Drawing.Size(604, 457);
             this.Controls.Add(this.btnPlayAgain);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.pictureBox1);
@@ -87,8 +88,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "GameOverForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form1";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

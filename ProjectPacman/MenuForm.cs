@@ -28,6 +28,7 @@ namespace ProjectPacman
         public MenuForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         public string PlayerName
@@ -55,11 +56,8 @@ namespace ProjectPacman
 
         private void playgame_Click(object sender, EventArgs e)
         {
-            player.Stop();
-            
             name = userNameTextBox.Text.Trim();
             
-
             if (string.IsNullOrEmpty(name))
             {
                 string message = "Please input your name.";
@@ -68,9 +66,8 @@ namespace ProjectPacman
             }
             else
             {
-                MessageForm message = new MessageForm(name);
+                MessageForm message = new MessageForm(name, player);
                 message.ShowDialog();
-
             }
         }
 
@@ -83,7 +80,6 @@ namespace ProjectPacman
         {
             _parent.Show();
         }
-
 
         private void aboutToolStripMenuItem_Click_1(object sender, EventArgs e)
         {

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Media;
+
 
 namespace ProjectPacman
 {
@@ -17,27 +19,19 @@ namespace ProjectPacman
         private string selectedDifficulty;
         private GameForm easyGame;
         private GameForm hardGame;
+        private SoundPlayer player;
 
-        //SoundPlayer player = new SoundPlayer("mysound.wav");
-
-        private void Message_Load(object sender, EventArgs e)
-        {
-            // player.Play();
-        }
-
-        public MessageForm(string name)
+        public MessageForm(string name, SoundPlayer player)
         {
             InitializeComponent();
             this.name = name;
+            this.player = player;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            // player.Stop();
-
             this.Close();
-            //MenuForm menu = new MenuForm();
-            //menu.Show();
         }
 
         private void btnContinue_Click(object sender, EventArgs e)
@@ -45,16 +39,15 @@ namespace ProjectPacman
 
             if (radioButtonEasy.Checked)
             {
-                // player.Stop();
+                player.Stop();
                 selectedDifficulty = "Easy";
                 HideMenuAndMessageForms();
-                //this.Hide();
                 easyGame = new GameForm(name, selectedDifficulty);
                 easyGame.ShowDialog();
             }
-            else //if (radioButtonHard.Checked)
+            else if (radioButtonHard.Checked)
             {
-                // player.Stop();
+                player.Stop();
                 selectedDifficulty = "Hard";
                 HideMenuAndMessageForms();
                 hardGame = new GameForm(name, selectedDifficulty);
@@ -62,28 +55,10 @@ namespace ProjectPacman
             }
         }
 
-        //private void CloseMenuAndMessageForms()
-        //{
-        //    foreach (Form form in Application.OpenForms)
-        //    {
-        //        if (form is MenuForm)
-        //        {
-        //            form.Close();
-        //            break;
-        //        }
-        //    }
-
-        //    EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
-        //    easyGame.ShowDialog();
-        //    this.Close();
-        //}
-
         private void HideMenuAndMessageForms()
         {
             MenuForm menu = Application.OpenForms.OfType<MenuForm>().FirstOrDefault();
-            menu?.Hide();
-
-            
+            menu?.Hide();  
             this.Hide();
         }
 
