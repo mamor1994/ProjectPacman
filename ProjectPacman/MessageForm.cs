@@ -15,8 +15,8 @@ namespace ProjectPacman
     {
         private string name;
         private string selectedDifficulty;
-        private EasyGameForm easyGame;
-        private EasyGameForm hardGame;
+        private GameForm easyGame;
+        private GameForm hardGame;
 
         //SoundPlayer player = new SoundPlayer("mysound.wav");
 
@@ -49,7 +49,7 @@ namespace ProjectPacman
                 selectedDifficulty = "Easy";
                 HideMenuAndMessageForms();
                 //this.Hide();
-                easyGame = new EasyGameForm(name, selectedDifficulty);
+                easyGame = new GameForm(name, selectedDifficulty);
                 easyGame.ShowDialog();
             }
             else //if (radioButtonHard.Checked)
@@ -57,7 +57,7 @@ namespace ProjectPacman
                 // player.Stop();
                 selectedDifficulty = "Hard";
                 HideMenuAndMessageForms();
-                hardGame = new EasyGameForm(name, selectedDifficulty);
+                hardGame = new GameForm(name, selectedDifficulty);
                 hardGame.ShowDialog();
             }
         }

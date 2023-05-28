@@ -10,21 +10,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Drawing.Imaging;
+using System.Media;
 
 
 namespace ProjectPacman
 {
     public partial class WinForm : Form
     {
-
-        //string gifFilePath = "save.gif";
-
         private string name;
         private string selectedDifficulty;
         private int score;
 
-        //SoundPlayer player = new SoundPlayer("mysound.wav");
-
+        SoundPlayer player = new SoundPlayer("mysound.wav");
 
         public WinForm(string name, string selectedDifficulty, int score)
         {
@@ -64,51 +61,48 @@ namespace ProjectPacman
         //    ImageAnimator.UpdateFrames();
         //    e.Graphics.DrawImage(pictureBox1.Image, pictureBox1.Location);
         //}
-
-
+ 
 
         private void Save_Load(object sender, EventArgs e)
         {
-            // player.Play();
+            player.Play();
         }
-
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            // player.Stop();
+            player.Stop();
+            Close();
+            MenuForm menu = Application.OpenForms.OfType<MenuForm>().FirstOrDefault();
+            menu.ClearNameTextBox();
+            menu.Show();
 
-            CloseGameAndWinForms();
-            MenuForm menu = new MenuForm();
-            menu.ShowDialog();
-              
         }
 
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
-            // player.Stop();
+            player.Stop();
             if (selectedDifficulty == "Easy")
             {
-                this.Close();
-                EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
-                easyGame.Show();
+                HideMenuForm();
+                Close();
+                GameForm easyGame = new GameForm(name, selectedDifficulty);
+                easyGame.ShowDialog();
 
-              
+
             }
             else if (selectedDifficulty == "Hard")
             {
-                //this.Close();
-                EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
-                easyGame.Show();
-
-                //HardGameForm hardGame = new HardGameForm(name);
-                //hardGame.ShowDialog();
+                HideMenuForm();
+                Close();
+                GameForm easyGame = new GameForm(name, selectedDifficulty);
+                easyGame.ShowDialog();
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             // player.Stop();
-
+            Close();
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Text Files (*.txt)|*.txt";
             saveFileDialog1.Title = "Save Form As";
@@ -116,8 +110,6 @@ namespace ProjectPacman
             {
                 using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
                 {
-                    //sw.Write(this.Text);
-
                     sw.WriteLine("Name: " + name);
                     sw.WriteLine("Difficulty: " + selectedDifficulty);
                     sw.WriteLine("Score: " + score);
@@ -127,17 +119,29 @@ namespace ProjectPacman
             }
 
         }
-        private void CloseGameAndWinForms()
+        //private void CloseGameAndWinForms()
+        //{
+        //    foreach (Form form in Application.OpenForms)
+        //    {
+        //        if (form is GameForm)
+        //        {
+        //            form.Hide();
+        //            break;
+        //        }
+        //    }
+        //    this.Hide();
+        //}
+
+        private void HideMenuForm()
         {
             foreach (Form form in Application.OpenForms)
             {
-                if (form is EasyGameForm)
+                if (form is MenuForm)
                 {
                     form.Hide();
                     break;
                 }
             }
-            this.Hide();
         }
     }
 }

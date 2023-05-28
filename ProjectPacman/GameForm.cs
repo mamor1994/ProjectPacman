@@ -13,7 +13,7 @@ using System.Media;
 
 namespace ProjectPacman
 {
-    public partial class EasyGameForm : Form
+    public partial class GameForm : Form
     {
 
         bool goup, godown, goleft, goright, isGameOver;
@@ -22,31 +22,26 @@ namespace ProjectPacman
 
         int remainingTime; 
 
-        //private SoundPlayer coinSoundPlayer;
+        private SoundPlayer coinSoundPlayer;
 
         private string name;
         private string selectedDifficulty;
         
 
 
-        public EasyGameForm(string name, string selectedDifficulty)
+        public GameForm(string name, string selectedDifficulty)
         {
             InitializeComponent();
 
             resetGame(selectedDifficulty);
             StartCountdownTimer(selectedDifficulty);
 
-            //coinSoundPlayer = new SoundPlayer("pacManEating.wav");
-
-            //coinSoundPlayer = new SoundPlayer();
-            //coinSoundPlayer.SoundLocation = @"C:\Users\User\Documents\ProjectPacman\ProjectPacman\ProjectPacman\music\mysound.wav";
+            coinSoundPlayer = new SoundPlayer("pacManEating.wav");
 
             this.name = name;
             this.selectedDifficulty = selectedDifficulty;
 
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-
-
         }
 
 
@@ -151,7 +146,7 @@ namespace ProjectPacman
                             x.Visible = false;
                             score++;
                             txtScore.Text = "Score: " + score;
-                           // coinSoundPlayer.Play(); 
+                           coinSoundPlayer.Play(); 
 
                         }
                     }
@@ -187,54 +182,36 @@ namespace ProjectPacman
                             GameOverForm gameover = new GameOverForm(name, selectedDifficulty);
                             gameover.Show();
                             Close();
-                            //gameOver("You Lose!");
                         }
                     }
                 }
-
             }
 
-
-            //moving ghost
-
-            //red
-
             redGhost.Left += redGhostSpeed;
-
             if (redGhost.Bounds.IntersectsWith(pictureBox1.Bounds) || redGhost.Bounds.IntersectsWith(pictureBox2.Bounds))
             {
                 redGhostSpeed = -redGhostSpeed;
             }
 
-            //yellow
-
             yellowGhost.Left -= yellowGhostSpeed;
-
             if (yellowGhost.Bounds.IntersectsWith(pictureBox20.Bounds) || yellowGhost.Bounds.IntersectsWith(pictureBox3.Bounds))
             {
                 yellowGhostSpeed = -yellowGhostSpeed;
             }
 
-            // pink
-
             pinkGhost.Left += pinkGhostSpeed;
-           
-
             if (pinkGhost.Left < 0 || pinkGhost.Left > ClientSize.Width - pinkGhost.Width)
             {
                 pinkGhostSpeed = -pinkGhostSpeed;
             }
-
-
 
             if (score >= 46)
             {
                 TerminateGame();
                 WinForm win = new WinForm(name, selectedDifficulty, score);
                 win.Show();
-                //gameOver("You Win!");
+                Close();
             }
-            
         }
      
 
@@ -249,7 +226,6 @@ namespace ProjectPacman
                 redGhostSpeed = 5;
                 yellowGhostSpeed = 5;
                 pinkGhostSpeed = 5;
-                //pinkGhostY = 5;
                 playerSpeed = 8;
             }
             else
@@ -258,7 +234,6 @@ namespace ProjectPacman
                 redGhostSpeed = 10;
                 yellowGhostSpeed = 10;
                 pinkGhostSpeed = 10;
-                //pinkGhostY = 10;
                 playerSpeed = 8;
             }
 
@@ -282,36 +257,9 @@ namespace ProjectPacman
                 {
                     x.Visible = true;
                 }
-            }
-            
+            }  
             gameTimer.Start();
-
         }
-
-       
-
-        //private void gameOver(string message)
-        //{
-        //    isGameOver = true;
-        //    gameTimer.Stop();
-        //    countdownTimer.Stop();
-
-        //    txtScore.Text = "Score: " + score + Environment.NewLine + message;
-        //    MessageBox.Show("You lose!", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        //    DialogResult result = MessageBox.Show("Do you want to play again?", "Restart Game", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        //    if (result == DialogResult.Yes)
-        //    {
-        //        resetGame(selectedDifficulty);
-        //    }
-        //    else
-        //    {
-        //        this.Hide();
-        //        MenuForm menu = new MenuForm();
-        //        menu.Show();
-        //    }
-        //}
-        
 
         private void StartCountdownTimer(string selectedDifficulty)
         {
@@ -330,9 +278,7 @@ namespace ProjectPacman
                 countdownTimer.Interval = 1000;
                 countdownTimer.Tick += CountdownTimer_Tick;
                 countdownTimer.Start();
-            }
-
-           
+            } 
         }
 
         private void CountdownTimer_Tick(object sender, EventArgs e)
@@ -349,6 +295,7 @@ namespace ProjectPacman
                 TerminateGame();
                 GameOverForm gameover = new GameOverForm(name,  selectedDifficulty);
                 gameover.Show();
+                Close();
             }
         }
 
@@ -357,8 +304,6 @@ namespace ProjectPacman
             isGameOver = true;
             gameTimer.Stop();
             countdownTimer.Stop();
-
         }
-
     }
 }

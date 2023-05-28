@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
+
 
 namespace ProjectPacman
 {
@@ -15,10 +17,10 @@ namespace ProjectPacman
 
         private string name;
         private string selectedDifficulty;
-        private readonly MenuForm menuForm;
+        //private readonly MenuForm menuForm;
 
 
-        //SoundPlayer player = new SoundPlayer("mysound.wav");
+        SoundPlayer player = new SoundPlayer("mysound.wav");
 
         public GameOverForm(string name, string selectedDifficulty)
         {
@@ -27,75 +29,56 @@ namespace ProjectPacman
             this.selectedDifficulty = selectedDifficulty;   
 
         }
-        public GameOverForm(MenuForm menuForm)
+        //public GameOverForm(MenuForm menuForm)
+        //{
+        //    InitializeComponent();
+        //    this.menuForm = menuForm;
+        //}
+
+        private void GameOverForm_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
-            this.menuForm = menuForm;
+            player.Play();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            // player.Stop();
-            //HideMenuForm();
-
-            //this.Hide();
-            //CloseGameAndGameOverForms();
+            player.Stop();
             Close();
             MenuForm menu = Application.OpenForms.OfType<MenuForm>().FirstOrDefault();
-            //menu.Name();
+            menu.ClearNameTextBox();
             menu.Show();
-            //Close();
         }
 
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
-            // player.Stop();
+            player.Stop();
             if (selectedDifficulty == "Easy")
             {
-                //EasyGameForm gameForm = Application.OpenForms.OfType<EasyGameForm>().FirstOrDefault();
-                //GameOverForm gameOverForm = Application.OpenForms.OfType<GameOverForm>().FirstOrDefault();
-
-                //gameForm?.Close();
-                //gameOverForm?.Close();
-
                 HideMenuForm();
-
-
-                //this.Hide();
-                //CloseGameAndGameOverForms();
                 Close();
-                EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
+                GameForm easyGame = new GameForm(name, selectedDifficulty);
                 easyGame.ShowDialog();
-                //Close();
-
             }
             else if (selectedDifficulty == "Hard")
             {
                 HideMenuForm();
-
-                //this.Hide();
-                //CloseGameAndGameOverForms();
                 Close();
-                EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
+                GameForm easyGame = new GameForm(name, selectedDifficulty);
                 easyGame.ShowDialog();
-               // Close();
-
-                //HardGameForm hardGame = new HardGameForm(name);
-                //hardGame.ShowDialog();
             }
         }
-        private void CloseGameAndGameOverForms()
-        {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is EasyGameForm)
-                {
-                    form.Hide();
-                    break;
-                }
-            }
-            this.Hide();
-        }
+        //private void CloseGameAndGameOverForms()
+        //{
+        //    foreach (Form form in Application.OpenForms)
+        //    {
+        //        if (form is GameForm)
+        //        {
+        //            form.Hide();
+        //            break;
+        //        }
+        //    }
+        //    this.Hide();
+        //}
 
         private void HideMenuForm()
         {
