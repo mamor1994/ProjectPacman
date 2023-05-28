@@ -18,7 +18,7 @@ namespace ProjectPacman
 
         bool goup, godown, goleft, goright, isGameOver;
 
-        int score, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostX, pinkGhostY;
+        int score, playerSpeed, redGhostSpeed, yellowGhostSpeed, pinkGhostSpeed;
 
         int remainingTime; 
 
@@ -174,7 +174,7 @@ namespace ProjectPacman
 
                         if (pinkGhost.Bounds.IntersectsWith(x.Bounds))
                         {
-                            pinkGhostX = -pinkGhostX;
+                            pinkGhostSpeed = -pinkGhostSpeed;
                         }
 
                     }
@@ -184,8 +184,9 @@ namespace ProjectPacman
                         if (pacman.Bounds.IntersectsWith(x.Bounds))
                         {
                             TerminateGame();
-                            GameOverForm gameover = new GameOverForm();
+                            GameOverForm gameover = new GameOverForm(name, selectedDifficulty);
                             gameover.Show();
+                            Close();
                             //gameOver("You Lose!");
                         }
                     }
@@ -216,12 +217,12 @@ namespace ProjectPacman
 
             // pink
 
-            pinkGhost.Left += pinkGhostX;
+            pinkGhost.Left += pinkGhostSpeed;
            
 
             if (pinkGhost.Left < 0 || pinkGhost.Left > ClientSize.Width - pinkGhost.Width)
             {
-                pinkGhostX = -pinkGhostX;
+                pinkGhostSpeed = -pinkGhostSpeed;
             }
 
 
@@ -247,8 +248,8 @@ namespace ProjectPacman
                 remainingTime = 60;
                 redGhostSpeed = 5;
                 yellowGhostSpeed = 5;
-                pinkGhostX = 5;
-                pinkGhostY = 5;
+                pinkGhostSpeed = 5;
+                //pinkGhostY = 5;
                 playerSpeed = 8;
             }
             else
@@ -256,8 +257,8 @@ namespace ProjectPacman
                 remainingTime = 30;
                 redGhostSpeed = 10;
                 yellowGhostSpeed = 10;
-                pinkGhostX = 10;
-                pinkGhostY = 10;
+                pinkGhostSpeed = 10;
+                //pinkGhostY = 10;
                 playerSpeed = 8;
             }
 
@@ -346,7 +347,7 @@ namespace ProjectPacman
             else
             {
                 TerminateGame();
-                GameOverForm gameover = new GameOverForm();
+                GameOverForm gameover = new GameOverForm(name,  selectedDifficulty);
                 gameover.Show();
             }
         }
@@ -358,7 +359,6 @@ namespace ProjectPacman
             countdownTimer.Stop();
 
         }
-
 
     }
 }

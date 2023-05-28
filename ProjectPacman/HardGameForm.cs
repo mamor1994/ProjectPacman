@@ -182,7 +182,7 @@ namespace ProjectPacman
                         if (pacman.Bounds.IntersectsWith(x.Bounds))
                         {
                             TerminateGame();
-                            GameOverForm gameover = new GameOverForm();
+                            GameOverForm gameover = new GameOverForm(name, selectedDifficulty);
                             gameover.Show();
                             //gameOver("You Lose!");
                         }
@@ -327,7 +327,7 @@ namespace ProjectPacman
                 else
                 {
                     TerminateGame();
-                    GameOverForm gameover = new GameOverForm();
+                    GameOverForm gameover = new GameOverForm(name, selectedDifficulty);
                     gameover.Show();
                 }
             }

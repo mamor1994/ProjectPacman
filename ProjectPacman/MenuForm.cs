@@ -9,16 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using System.Drawing.Imaging;
-
-
+using System.Runtime.CompilerServices;
 
 namespace ProjectPacman
 {
-    public partial class MenuForm : Form
+    public partial class MenuForm : Form, INotifyPropertyChanged
     {
 
         private readonly Form _parent;
         private string name;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
 
         //SoundPlayer player = new SoundPlayer("mysound.wav");
@@ -28,6 +29,24 @@ namespace ProjectPacman
         {
             InitializeComponent();
             //player.SoundLocation = @"C:\Users\User\Documents\ProjectPacman\ProjectPacman\ProjectPacman\music\mysound.wav";
+        }
+
+        public string PlayerName
+        {
+            get 
+            {
+                return name; 
+            }
+            set 
+            { 
+                name = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private void Menu_Load(object sender, EventArgs e)

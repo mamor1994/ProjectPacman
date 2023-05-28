@@ -15,6 +15,8 @@ namespace ProjectPacman
     {
         private string name;
         private string selectedDifficulty;
+        private EasyGameForm easyGame;
+        private EasyGameForm hardGame;
 
         //SoundPlayer player = new SoundPlayer("mysound.wav");
 
@@ -34,8 +36,8 @@ namespace ProjectPacman
             // player.Stop();
 
             this.Close();
-            MenuForm menu = new MenuForm();
-            menu.Show();
+            //MenuForm menu = new MenuForm();
+            //menu.Show();
         }
 
         private void btnContinue_Click(object sender, EventArgs e)
@@ -45,20 +47,18 @@ namespace ProjectPacman
             {
                 // player.Stop();
                 selectedDifficulty = "Easy";
-                CloseMenuAndMessageForms();
+                HideMenuAndMessageForms();
                 //this.Hide();
-                EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
+                easyGame = new EasyGameForm(name, selectedDifficulty);
                 easyGame.ShowDialog();
             }
             else //if (radioButtonHard.Checked)
             {
                 // player.Stop();
                 selectedDifficulty = "Hard";
-                CloseMenuAndMessageForms();
-                EasyGameForm easyGame = new EasyGameForm(name, selectedDifficulty);
-                easyGame.ShowDialog();
-                //HardGameForm hardGame = new HardGameForm(name, selectedDifficulty);
-                //hardGame.ShowDialog();
+                HideMenuAndMessageForms();
+                hardGame = new EasyGameForm(name, selectedDifficulty);
+                hardGame.ShowDialog();
             }
         }
 
@@ -78,7 +78,7 @@ namespace ProjectPacman
         //    this.Close();
         //}
 
-        private void CloseMenuAndMessageForms()
+        private void HideMenuAndMessageForms()
         {
             MenuForm menu = Application.OpenForms.OfType<MenuForm>().FirstOrDefault();
             menu?.Hide();

@@ -103,6 +103,7 @@
             this.pictureBox51.TabIndex = 32;
             this.pictureBox51.TabStop = false;
             this.pictureBox51.Tag = "wall";
+            this.pictureBox51.UseWaitCursor = true;
             // 
             // pictureBox19
             // 
@@ -114,6 +115,7 @@
             this.pictureBox19.TabIndex = 31;
             this.pictureBox19.TabStop = false;
             this.pictureBox19.Tag = "wall";
+            this.pictureBox19.UseWaitCursor = true;
             // 
             // pictureBox18
             // 
@@ -125,6 +127,7 @@
             this.pictureBox18.TabIndex = 30;
             this.pictureBox18.TabStop = false;
             this.pictureBox18.Tag = "wall";
+            this.pictureBox18.UseWaitCursor = true;
             // 
             // pictureBox17
             // 
@@ -136,17 +139,19 @@
             this.pictureBox17.TabIndex = 29;
             this.pictureBox17.TabStop = false;
             this.pictureBox17.Tag = "wall";
+            this.pictureBox17.UseWaitCursor = true;
             // 
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pictureBox16.Location = new System.Drawing.Point(361, 128);
+            this.pictureBox16.Location = new System.Drawing.Point(361, 115);
             this.pictureBox16.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(13, 49);
             this.pictureBox16.TabIndex = 28;
             this.pictureBox16.TabStop = false;
             this.pictureBox16.Tag = "wall";
+            this.pictureBox16.UseWaitCursor = true;
             // 
             // pictureBox13
             // 
@@ -158,6 +163,7 @@
             this.pictureBox13.TabIndex = 27;
             this.pictureBox13.TabStop = false;
             this.pictureBox13.Tag = "wall";
+            this.pictureBox13.UseWaitCursor = true;
             // 
             // pictureBox12
             // 
@@ -169,6 +175,7 @@
             this.pictureBox12.TabIndex = 26;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Tag = "wall";
+            this.pictureBox12.UseWaitCursor = true;
             // 
             // pictureBox11
             // 
@@ -180,6 +187,7 @@
             this.pictureBox11.TabIndex = 25;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Tag = "wall";
+            this.pictureBox11.UseWaitCursor = true;
             // 
             // pictureBox9
             // 
@@ -191,6 +199,7 @@
             this.pictureBox9.TabIndex = 24;
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Tag = "wall";
+            this.pictureBox9.UseWaitCursor = true;
             // 
             // pictureBox34
             // 
@@ -202,6 +211,7 @@
             this.pictureBox34.TabIndex = 23;
             this.pictureBox34.TabStop = false;
             this.pictureBox34.Tag = "wall";
+            this.pictureBox34.UseWaitCursor = true;
             // 
             // pictureBox10
             // 
@@ -213,6 +223,7 @@
             this.pictureBox10.TabIndex = 22;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Tag = "wall";
+            this.pictureBox10.UseWaitCursor = true;
             // 
             // pictureBox8
             // 
@@ -224,6 +235,7 @@
             this.pictureBox8.TabIndex = 21;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Tag = "wall";
+            this.pictureBox8.UseWaitCursor = true;
             // 
             // pictureBox7
             // 
@@ -235,6 +247,7 @@
             this.pictureBox7.TabIndex = 20;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "wall";
+            this.pictureBox7.UseWaitCursor = true;
             // 
             // pictureBox6
             // 
@@ -246,6 +259,7 @@
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "wall";
+            this.pictureBox6.UseWaitCursor = true;
             // 
             // pictureBox5
             // 
@@ -257,6 +271,7 @@
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Tag = "wall";
+            this.pictureBox5.UseWaitCursor = true;
             // 
             // pictureBox4
             // 
@@ -268,6 +283,7 @@
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Tag = "wall";
+            this.pictureBox4.UseWaitCursor = true;
             // 
             // pictureBox36
             // 
@@ -279,6 +295,7 @@
             this.pictureBox36.TabIndex = 16;
             this.pictureBox36.TabStop = false;
             this.pictureBox36.Tag = "wall";
+            this.pictureBox36.UseWaitCursor = true;
             // 
             // pictureBox3
             // 
@@ -290,6 +307,7 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Tag = "wall";
+            this.pictureBox3.UseWaitCursor = true;
             // 
             // pictureBox2
             // 
@@ -301,6 +319,7 @@
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "wall";
+            this.pictureBox2.UseWaitCursor = true;
             // 
             // pictureBox1
             // 
@@ -312,6 +331,7 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "wall";
+            this.pictureBox1.UseWaitCursor = true;
             // 
             // pictureBox38
             // 
@@ -323,6 +343,7 @@
             this.pictureBox38.TabIndex = 12;
             this.pictureBox38.TabStop = false;
             this.pictureBox38.Tag = "wall";
+            this.pictureBox38.UseWaitCursor = true;
             // 
             // pictureBox14
             // 
@@ -334,6 +355,7 @@
             this.pictureBox14.TabIndex = 11;
             this.pictureBox14.TabStop = false;
             this.pictureBox14.Tag = "wall";
+            this.pictureBox14.UseWaitCursor = true;
             // 
             // pictureBox15
             // 
@@ -345,6 +367,7 @@
             this.pictureBox15.TabIndex = 10;
             this.pictureBox15.TabStop = false;
             this.pictureBox15.Tag = "wall";
+            this.pictureBox15.UseWaitCursor = true;
             // 
             // pictureBox40
             // 
@@ -356,6 +379,7 @@
             this.pictureBox40.TabIndex = 9;
             this.pictureBox40.TabStop = false;
             this.pictureBox40.Tag = "wall";
+            this.pictureBox40.UseWaitCursor = true;
             // 
             // pictureBox41
             // 
@@ -367,6 +391,7 @@
             this.pictureBox41.TabIndex = 8;
             this.pictureBox41.TabStop = false;
             this.pictureBox41.Tag = "wall";
+            this.pictureBox41.UseWaitCursor = true;
             // 
             // redGhost
             // 
@@ -379,6 +404,7 @@
             this.redGhost.TabIndex = 34;
             this.redGhost.TabStop = false;
             this.redGhost.Tag = "ghost";
+            this.redGhost.UseWaitCursor = true;
             // 
             // pacman
             // 
@@ -390,6 +416,7 @@
             this.pacman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pacman.TabIndex = 35;
             this.pacman.TabStop = false;
+            this.pacman.UseWaitCursor = true;
             // 
             // pinkGhost
             // 
@@ -402,6 +429,7 @@
             this.pinkGhost.TabIndex = 36;
             this.pinkGhost.TabStop = false;
             this.pinkGhost.Tag = "ghost";
+            this.pinkGhost.UseWaitCursor = true;
             // 
             // yellowGhost
             // 
@@ -414,6 +442,7 @@
             this.yellowGhost.TabIndex = 37;
             this.yellowGhost.TabStop = false;
             this.yellowGhost.Tag = "ghost";
+            this.yellowGhost.UseWaitCursor = true;
             // 
             // txtScore
             // 
@@ -425,6 +454,7 @@
             this.txtScore.Size = new System.Drawing.Size(94, 25);
             this.txtScore.TabIndex = 38;
             this.txtScore.Text = "Score: 0";
+            this.txtScore.UseWaitCursor = true;
             // 
             // Countdown1
             // 
@@ -438,6 +468,7 @@
             this.Countdown1.TabIndex = 39;
             this.Countdown1.Tag = "Countdown1";
             this.Countdown1.Text = "Time: ";
+            this.Countdown1.UseWaitCursor = true;
             // 
             // gameTimer
             // 
@@ -484,6 +515,8 @@
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox40);
             this.Controls.Add(this.pictureBox41);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "HardGameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

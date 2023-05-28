@@ -155,7 +155,7 @@
             this.ForeColor = System.Drawing.SystemColors.Desktop;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MenuForm";
+            this.PlayerName = "MenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PACMAN GAME";
             this.Load += new System.EventHandler(this.Menu_Load);
