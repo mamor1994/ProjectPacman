@@ -34,7 +34,7 @@ namespace ProjectPacman
             resetGame(selectedDifficulty);
             StartCountdownTimer(selectedDifficulty);
 
-            coinSoundPlayer = new SoundPlayer("pacManEating.wav");
+            coinSoundPlayer = new SoundPlayer(@"..\..\musicPacman\pacManEating.wav");
 
             this.name = name;
             this.selectedDifficulty = selectedDifficulty;

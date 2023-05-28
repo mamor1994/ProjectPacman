@@ -22,7 +22,7 @@ namespace ProjectPacman
         public event PropertyChangedEventHandler PropertyChanged;
 
 
-        SoundPlayer player = new SoundPlayer("mysound.wav");
+        SoundPlayer player = new SoundPlayer(@"..\..\musicPacman\mysound.wav");
 
 
         public MenuForm()

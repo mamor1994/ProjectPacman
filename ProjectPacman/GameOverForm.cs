@@ -18,7 +18,7 @@ namespace ProjectPacman
         private string name;
         private string selectedDifficulty;
 
-        SoundPlayer player = new SoundPlayer("mysound.wav");
+        SoundPlayer player = new SoundPlayer(@"..\..\musicPacman\mysound.wav");
 
         public GameOverForm(string name, string selectedDifficulty)
         {

@@ -21,7 +21,7 @@ namespace ProjectPacman
         private string selectedDifficulty;
         private int score;
 
-        SoundPlayer player = new SoundPlayer("mysound.wav");
+        SoundPlayer player = new SoundPlayer(@"..\..\musicPacman\mysound.wav");
 
         public WinForm(string name, string selectedDifficulty, int score)
         {
