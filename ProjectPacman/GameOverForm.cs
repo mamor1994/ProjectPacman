@@ -20,6 +20,7 @@ namespace ProjectPacman
 
         SoundPlayer player = new SoundPlayer(@"..\..\musicPacman\mysound.wav");
 
+
         public GameOverForm(string name, string selectedDifficulty)
         {
             InitializeComponent();
